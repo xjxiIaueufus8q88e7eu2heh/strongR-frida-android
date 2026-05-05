@@ -8,7 +8,8 @@ on:
 jobs: 
   check_version:
     runs-on: ubuntu-22.04
-
+    permissions:
+      contents: write  # This is
     outputs:
       FRIDA_VERSION: ${{ steps.pullFridaLatestRelease.outputs.FRIDA_VERSION }}
       ALREADY_RELEASE: ${{ steps.checkReleaseVersion.outputs.ALREADY_RELEASE }}
